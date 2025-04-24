@@ -1,8 +1,7 @@
 class StudentsController < ApplicationController
-
- def index
+  def index
     @students = Student.all.order({ :created_at => :desc })
-    
+
     render({ :template => "students/index" })
   end
 
